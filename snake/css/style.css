@@ -83,6 +83,10 @@ td {
 	display: none;
 }
 
+button {
+	cursor: pointer;
+}
+
 .scored {
 	display: flex;
 	align-items: center;
@@ -113,4 +117,95 @@ td {
 }
 .scored__pause > img, .scored__reload  > img {
 	height: 100%;
+}
+
+#up, #right, #left, #down {
+	border: solid 1px #eee;
+	border-radius: 3px;
+	background-color: transparent;
+	display: inline-block;
+	position: relative;
+}
+#up, #down {
+	width: 58px;
+	height: 58px;
+}
+#right, #left {
+	height: 58px;
+	width: 58px;
+}
+#left {
+	margin-right: 58px;
+	border-right: none;
+}
+#left::before {
+	content: '';
+	display: block;
+	height: 39px;
+	width: 39px;
+	border: solid 1px #eee;
+	position: absolute;
+	border-bottom: none;
+	border-left: none;
+	position: absolute;
+	transform: rotate(45deg);
+	top: 8px;
+	right: -19px;
+}
+#right {
+	border-left: none;
+}
+#right::after {
+	content: '';
+	display: block;
+	height: 39px;
+	width: 39px;
+	border: solid 1px #eee;
+	position: absolute;
+	border-top: none;
+	border-right: none;
+	position: absolute;
+	transform: rotate(45deg);
+	top: 8px;
+	left: -19px;
+}
+#up {
+	border-bottom: none;
+	margin-bottom: 2px;
+}
+#up::after {
+	content: '';
+	display: block;
+	height: 39px;
+	width: 39px;
+	border: solid 1px #eee;
+	position: absolute;
+	border-top: none;
+	border-left: none;
+	position: absolute;
+	transform: rotate(45deg);
+	top: 36px;
+	left: 8px;
+}
+#down {
+	border-top: none;
+	margin-top: 2px;
+}
+#down::after {
+	content: '';
+	display: block;
+	height: 39px;
+	width: 39px;
+	border: solid 1px #eee;
+	position: absolute;
+	border-bottom: none;
+	border-right: none;
+	position: absolute;
+	transform: rotate(45deg);
+	top: -19px;
+	left: 8px;
+}
+.controls {
+	text-align: center;
+	margin-top: 10px;
 }
