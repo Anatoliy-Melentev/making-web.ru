@@ -2,7 +2,12 @@
     board = new Board(10, 10),
     p = new Point({ x: 1, y: 3}),
     snake = new Snake(p, 3),
-    food = new Food(board.rowsCount,board.colsCount);
+    food = new Food(board.rowsCount,board.colsCount),
+
+    upBtn = document.querySelector('#up'),
+    leftBtn = document.querySelector('#left'),
+    rightBtn = document.querySelector('#right'),
+    downBtn = document.querySelector('#down');
 
   let
     bread = food.setFood(snake),
@@ -16,6 +21,11 @@
     e.preventDefault();
     snake.changeDirection(e.code);
   }, true);
+
+  upBtn.addEventListener('click', () => snake.changeDirection('ArrowUp'));
+  leftBtn.addEventListener('click', () => snake.changeDirection('ArrowLeft'));
+  rightBtn.addEventListener('click', () => snake.changeDirection('ArrowRight'));
+  downBtn.addEventListener('click', () => snake.changeDirection('ArrowDown'));
 
   reloadBtn.addEventListener('click', () => {
     clearInterval(interval);
