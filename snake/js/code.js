@@ -1,6 +1,6 @@
   const
     board = new Board(10, 10),
-    p = new Point({ x: 1, y: 3}),
+    p = new Points({ x: 1, y: 3}),
     snake = new Snake(p, 3),
     food = new Food(board.rowsCount,board.colsCount),
 

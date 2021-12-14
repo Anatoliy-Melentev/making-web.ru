@@ -4,7 +4,7 @@ class Snake  {
     this.direction = direction || 'right';
 
     for (let i = 0; i < len; i++) {
-      let p = new Point(tail, !i ? 'left' : (i + 1 === len ? 'right' : 'point'));
+      let p = new Points(tail, !i ? 'left' : (i + 1 === len ? 'right' : 'point'));
       p.move(i, this.direction);
       this.points.push(p);
     }
@@ -26,7 +26,7 @@ class Snake  {
     this.renderBody();
   }
   nextPoint() {
-    const head = new Point(this.points[this.points.length - 1], this.direction);
+    const head = new Points(this.points[this.points.length - 1], this.direction);
 
     head.move(1, this.direction);
     return head;
@@ -87,7 +87,7 @@ class Snake  {
     this.direction = 'right';
 
     for (let i = 0; i < len; i++) {
-      let p = new Point(tail, !i ? 'left' : (i + 1 === len ? 'right' : 'point'));
+      let p = new Points(tail, !i ? 'left' : (i + 1 === len ? 'right' : 'point'));
       p.move(i, this.direction);
       this.points.push(p);
     }

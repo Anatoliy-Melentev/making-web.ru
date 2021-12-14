@@ -1,4 +1,4 @@
-class Point {
+class Points {
   constructor({x ,y}, className) {
     this.x = x;
     this.y = y;

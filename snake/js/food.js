@@ -33,6 +33,6 @@ class Food {
       newCoords = this.createCoords(snake);
     } while (!newCoords)
 
-    return new Point(newCoords, this.className);
+    return new Points(newCoords, this.className);
   }
 }
