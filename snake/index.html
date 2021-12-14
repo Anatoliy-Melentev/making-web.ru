@@ -1,27 +1,32 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>SnakeJS</title>
-	<style>
-		table, tr, td {
-			margin: 0;
-			padding: 0;
-			border-spacing: 0px;
-		}
-		td {
-			display: inline-block;
-		}
-	</style>
-
+	<meta name="viewport"
+	      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<script src="js/food.js" defer></script>
+	<script src="js/player.js" defer></script>
+	<script src="js/board.js" defer></script>
+	<script src="js/point.js" defer></script>
+	<script src="js/snake.js" defer></script>
+	<script src="js/code.js" defer></script>
+	<link rel="stylesheet" href="css/style.css">
+	<title>Червяк</title>
 </head>
 <body>
-
+	<div class="scored">
+		<button type="button" class="scored__pause">
+			pause
+		</button>
+		<div class="scored__table"></div>
+		<button type="button" class="scored__reload">
+			reload
+		</button>
+	</div>
+	<div class="game">
+		<table class="game__board"></table>
+		<div class="game__over"></div>
+	</div>
 </body>
-<script src="js/tableCreate.js"></script>
-<script src="js/Point.js"></script>
-<script>
-	let newTable = new tableCreate(50,30);
-	let newPoint = new Point(newTable, 5,3,'black');
-</script>
 </html>
