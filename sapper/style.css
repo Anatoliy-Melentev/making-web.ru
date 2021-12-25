@@ -1,0 +1,170 @@
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+td {
+	width: 30px;
+	height: 30px;
+	background-color: #fff;
+	border: solid 3px #eee;
+	text-align: center;
+	margin: 3px;
+	font-weight: bold;
+}
+
+.bomb {
+	border: solid 3px #fff;
+	position: relative;
+}
+.bomb:after, .bomb:before {
+	content: "";
+	position: absolute;
+	display: block;
+	width: 8px;
+	height: 8px;
+	background-color: #aa0000;
+	border: solid 5px transparent;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	margin: auto;
+}
+.bomb:after{
+	transform: rotate(45deg);
+}
+
+.open {
+	border: solid 3px #fff;
+}
+
+.number {
+
+}
+.c1 {
+	color: #0046fe;
+}
+.c2 {
+	color: #4700a9
+}
+.c3{
+	color: #9e00b5
+}
+.c4 {
+	color: #c5144a
+}
+.c5 {
+	color: #ff2108
+}
+.c6 {
+	color: #fe5200
+}
+.c7 {
+	color: #fe9900
+}
+.c8 {
+	color: #f8c002
+}
+
+.flag {
+	border: solid 3px #eee;
+	position: relative;
+}
+.flag:before, .flag:after {
+	content: "";
+	display: block;
+	width: 26px;
+	height: 4px;
+	background-color: #000;
+	position: absolute;
+	margin: auto;
+	top: 0; right: 0; left: 0; bottom: 0;
+}
+.flag:after {
+	transform: rotate(45deg);
+}
+.flag:before {
+	transform: rotate(-45deg);
+}
+
+.game {
+	display: inline-block;
+	position: relative;
+	padding: 5px;
+	border: solid 1px #eee;
+}
+
+.game__over {
+	width: 100%;
+	height: 100%;
+	background-color: white;
+	color: black;
+	top: 0;
+	position: absolute;
+	padding-top: 50px;
+	text-align: center;
+	box-sizing: border-box;
+	font-size: 30px;
+	justify-content: center;
+	align-items: center;
+	opacity: 0.5;
+	display: none;
+}
+
+input {
+	width: 50px;
+	border-radius: 0;
+	border: solid 1px #eee;
+	line-height: 60px;
+	vertical-align: middle;
+}
+output {
+	line-height: 60px;
+	vertical-align: middle;
+	color: white;
+}
+
+.scored__reload, .scored__tools, input {
+	max-width: 290px;
+	display: inline-block;
+	min-width: 102px;
+	text-align: center;
+	padding: 5px;
+	font-size: 20px;
+	border: solid 1px #eee;
+	border-radius: 3px;
+	background-color: transparent;
+	margin: 2px;
+}
+
+button.scored__reload, .scored__tools {
+	color: white;
+}
+
+.scored {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	width: 100%;
+	background-color: black;
+	vertical-align: middle;
+}
+
+label {
+	color: white;
+	margin-left: 10px;
+}
+
+.visually-hidden {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	padding: 0;
+	overflow: hidden;
+	border: 0;
+	clip: rect(0 0 0 0);
+}
